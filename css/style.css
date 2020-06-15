@@ -1,0 +1,247 @@
+/****************************************
+*    Variables
+*****************************************/
+:root {
+  --background: #ebebeb;
+  --primary: #445ca6;
+  --text: #1d1d1d;
+  --link: #60609e;
+  --font-family: "Noto Sans";
+}
+
+/* Resets */
+html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}blockquote,body,figure,h1,h2,h3,h4,h5,h6,hr,li,ol,pre,ul{margin:0;padding:0}ul{list-style:none}button,input,select,textarea{color:inherit;font:inherit;letter-spacing:inherit}button,input,textarea{border:1px solid gray}button{border-radius:0;padding:.75em 1em;background-color:transparent}button *{pointer-events:none}embed,iframe,img,object,video{display:block;max-width:100%}table{table-layout:fixed;width:100%}[hidden]{display:none}noscript{display:block;margin-bottom:1em;margin-top:1em}
+
+/****************************************
+*    Base
+*****************************************/
+html {
+  height: 100%;
+}
+
+body {
+  color: var(--text);
+  background: var(--background);
+  font-family: var(--font-family);
+  font-size: 100%;
+  font-size: calc(16px + (20 - 16) * ((100vw - 640px) / (1400 - 640)));
+}
+
+a {
+  text-decoration: none;
+  color: var(--link);
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: 1.6em;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 1.4em;
+  line-height: 1.15;
+}
+
+/****************************************
+*    Componentes
+*****************************************/
+/* Header */
+.header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 9.5em;
+}
+
+.nav {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2em;
+}
+
+@media only screen and (min-width: 40em) {
+  .header {
+    flex-direction: row;
+    max-width: 90vw;
+    margin: 0 0 0 auto;
+  }
+
+  .header > * {
+    flex: 1;
+  }
+
+  .menu {
+    margin-right: 3em;
+  }
+}
+
+/* Hero */
+.hero {
+  width: 80vw;
+  height: max-content;
+  margin: auto;
+}
+
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero__text > * {
+   margin: 0.4em 0;
+}
+
+.hero h1 {
+  font-size: 1.4em;
+  font-weight: 400;
+  order: 2;
+}
+
+.hero p {
+  font-size: 2em;
+  line-height: 1.4;
+  order: 1;
+}
+
+.hero button {
+  background-color: #445CA6;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 17px;
+  max-width: 210px;
+  margin-top: 1em;
+  order: 3;
+  padding: .65em;
+  text-align: center;
+  transition: background-color .2s linear, color .2s linear;
+}
+
+.hero button:hover {
+  background-color: #6982CE;
+  color: #FFFFFF;
+}
+
+@media only screen and (min-width: 40em) {
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .hero__img {
+    width: 40vw;
+    max-width: max-content;
+    margin: 0 auto 1em;
+  }
+
+  .hero > * {
+    flex: 1;
+  }
+}
+
+/* Propuesta */
+.propuesta {
+  width: 90vw;
+  margin: 10vh auto 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.propuesta__item {
+  padding: 0 2em;
+}
+
+.propuesta__item h3 {
+  font-size: 1.8em;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.propuesta__item p {
+  font-size: 1.2em;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.propuesta__item-img img {
+  width: 300px;
+  height: 300px;
+  margin: 4em 0;
+  background-color: rgba(190, 193, 198, 0.53);
+  box-shadow: rgba(0, 0, 0, 0.25) 0.2em 0.5em 1em;
+  border-radius: 200px;
+}
+
+@media only screen and (min-width: 40em) {
+  .propuesta__item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .propuesta__item.inverted {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .inverted h3 {
+    width: 100%;
+  }
+
+  .propuesta__item-text {
+    width: 55%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 60px 0px 0px 0px;
+    overflow: visible;
+  }
+
+  .propuesta__item-text h3 {
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: normal;
+  }
+
+  .propuesta__item-text p {
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  .propuesta__item:nth-child(odd) p {
+    text-align: right;
+  }
+
+  .propuesta__item:nth-child(even) {
+    margin: 3em 0;
+  }
+
+  .propuesta__item-img img {
+    margin: 0;
+  }
+}
