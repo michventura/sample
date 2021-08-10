@@ -10,7 +10,75 @@
 }
 
 /* Resets */
-html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}blockquote,body,figure,h1,h2,h3,h4,h5,h6,hr,li,ol,pre,ul{margin:0;padding:0}ul{list-style:none}button,input,select,textarea{color:inherit;font:inherit;letter-spacing:inherit}button,input,textarea{border:1px solid gray}button{border-radius:0;padding:.75em 1em;background-color:transparent}button *{pointer-events:none}embed,iframe,img,object,video{display:block;max-width:100%}table{table-layout:fixed;width:100%}[hidden]{display:none}noscript{display:block;margin-bottom:1em;margin-top:1em}
+html {
+  box-sizing: border-box;
+}
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+blockquote,
+body,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+li,
+ol,
+pre,
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+button,
+input,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+}
+button,
+input,
+textarea {
+  border: 1px solid gray;
+}
+button {
+  border-radius: 0;
+  padding: 0.75em 1em;
+  background-color: transparent;
+}
+button * {
+  pointer-events: none;
+}
+embed,
+iframe,
+img,
+object,
+video {
+  display: block;
+  max-width: 100%;
+}
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+[hidden] {
+  display: none;
+}
+noscript {
+  display: block;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
 
 /****************************************
 *    Base
@@ -92,6 +160,7 @@ h3 {
 }
 
 /* Hero */
+/* TODO: #2 Crear xyz */
 .hero {
   width: 80vw;
   height: max-content;
@@ -105,7 +174,7 @@ h3 {
 }
 
 .hero__text > * {
-   margin: 0.4em 0;
+  margin: 0.4em 0;
 }
 
 .hero h1 {
@@ -121,23 +190,23 @@ h3 {
 }
 
 .hero button {
-  background-color: #445CA6;
+  background-color: #445ca6;
   border: 2px solid transparent;
   border-radius: 10px;
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer;
   font-size: 17px;
   max-width: 210px;
   margin-top: 1em;
   order: 3;
-  padding: .65em;
+  padding: 0.65em;
   text-align: center;
-  transition: background-color .2s linear, color .2s linear;
+  transition: background-color 0.2s linear, color 0.2s linear;
 }
 
 .hero button:hover {
-  background-color: #6982CE;
-  color: #FFFFFF;
+  background-color: #6982ce;
+  color: #ffffff;
 }
 
 @media only screen and (min-width: 40em) {
